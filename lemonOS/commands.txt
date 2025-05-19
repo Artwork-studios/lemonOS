@@ -1,0 +1,22 @@
+nasm -f bin boot.asm -o boot.bin
+
+qemu-system-x86_64 -drive format=raw,file=boot.bin
+
+
+
+!danger zone!
+(love is a danger zone... hah osu stream reference)
+
+qemu-system-x86_64 -m 1 -drive format=raw,file=boot.bin
+
+
+
+this works... wow
+
+
+following a custom standard i made called MLOS (mini lovely OS standard)
+main commands:
+    kill (shuts off OS and pc)
+    ver  (OS and Kernel version)
+    new  (clears console)
+    ram  (check remaining ram)
